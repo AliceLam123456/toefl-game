@@ -25,7 +25,7 @@ function generateSmartOptions(targetWord: any, allWords: any) {
 
 // 播放正確/錯誤音效
 const playFeedbackSound = (isCorrect: any) => {
-  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
   if (!AudioContext) return;
   const ctx = new AudioContext();
   const osc = ctx.createOscillator();
