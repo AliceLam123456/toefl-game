@@ -93,7 +93,7 @@ const speakWord = (text: any) => {
 };
 
 // --- 3. 遊戲測驗畫面元件 ---
-function QuizScreen({ mode, wrongWords, setWrongWords, setActiveTab }) {
+function QuizScreen({ mode, wrongWords, setWrongWords, setActiveTab }: any) {
   const [currentWord, setCurrentWord] = useState(null);
   const [options, setOptions] = useState([]);
   const [isEngToZh, setIsEngToZh] = useState(true);
