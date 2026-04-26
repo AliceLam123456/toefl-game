@@ -84,7 +84,7 @@ const playExplosionSound = () => {
   noise.stop(ctx.currentTime + 1.5);
 };
 
-const speakWord = (text) => {
+const speakWord = (text: any) => {
   if ("speechSynthesis" in window) {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = "en-US";
