@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { wordDatabase } from "./words";
 
 // --- 2. 工具函數 ---
-function generateSmartOptions(targetWord, allWords) {
+function generateSmartOptions(targetWord, allWords: any) {
   let interferencePool = allWords.filter(
     (w) => w.pos === targetWord.pos && w.id !== targetWord.id
   );
