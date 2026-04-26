@@ -4,15 +4,15 @@ import { wordDatabase } from "./words";
 // --- 2. 工具函數 ---
 function generateSmartOptions(targetWord: any, allWords: any) {
   let interferencePool = allWords.filter(
-    (w) => w.pos === targetWord.pos && w.id !== targetWord.id
+    (w: any) => w.pos === targetWord.pos && w.id !== targetWord.id
   );
   const similarLengthPool = interferencePool.filter(
-    (w) => Math.abs(w.length - targetWord.length) <= 2
+    (w: any) => Math.abs(w.length - targetWord.length) <= 2
   );
   if (similarLengthPool.length >= 3) interferencePool = similarLengthPool;
   if (interferencePool.length < 3) {
     const fallbackPool = allWords.filter(
-      (w) => w.id !== targetWord.id && !interferencePool.includes(w)
+      (w: any) => w.id !== targetWord.id && !interferencePool.includes(w)
     );
     interferencePool = interferencePool.concat(fallbackPool);
   }
