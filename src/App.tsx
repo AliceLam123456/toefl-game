@@ -53,7 +53,7 @@ const playFeedbackSound = (isCorrect: any) => {
 
 // 播放爆炸音效 (利用白噪音合成)
 const playExplosionSound = () => {
-  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
   if (!AudioContext) return;
   const ctx = new AudioContext();
 
