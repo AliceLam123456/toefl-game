@@ -1,4 +1,4 @@
-// words.js
+// words.ts
 export const wordDatabase = [
     { id: "T001", en: "abandon", zh: "放棄；遺棄", pos: "v", length: 7 },
     { id: "T002", en: "abundant", zh: "豐富的；大量的", pos: "adj", length: 8 },
